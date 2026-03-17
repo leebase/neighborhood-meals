@@ -156,7 +156,7 @@ Create a minimal but real application that supports the book's setup, debugging,
 
 **Phase**: Phase 1 — Core Foundation
 **Mode**: Mode 2 (Implementation with approval)
-**Next Milestone**: Create and verify the `reference-working` baseline branch
+**Next Milestone**: Finish and verify the `reference-working` baseline branch
 
 ---
 

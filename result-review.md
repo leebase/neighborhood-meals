@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-03-17 — Sprint 2 baseline fixes prepared on main
+
+### What Was Built
+Applied the real repo fixes needed before freezing a trustworthy working baseline. The README now uses the backend virtualenv interpreter explicitly, the root scaffold metadata no longer advertises a dead console-script entrypoint, the startup protocol includes `WHERE_AM_I.md`, and a new `architecture.md` records the core stack decisions.
+
+### Why It Matters
+These changes do not remove intentional friction from `main`; they remove accidental drift that would make the happy path or handoff guidance misleading. That makes `reference-working` worth creating from this state instead of from a partially corrected repo.
+
+### How to Verify
+1. Read `README.md` and confirm the backend run command is `./.venv/bin/python app.py`.
+2. Read `pyproject.toml` and confirm the broken root console script entry is gone and `requires-python` is `>=3.11`.
+3. Read `AGENTS.md` and confirm the startup protocol includes `WHERE_AM_I.md`.
+4. Read `architecture.md` and confirm it explains the backend/frontend split and the intentional-friction policy.
+
+## 2026-03-17 — Code review standard clarified for book-driven artifacts
+
+### What Was Built
+Updated the repo conventions so future code reviews distinguish between true repo defects and intentional or book-driven artifacts. `AGENTS.md` and `skills/code-review.md` now explicitly tell reviewers to separate must-fix issues from items that may instead be resolved by feeding reality back into the manuscript.
+
+### Why It Matters
+This project is not a generic production app. Without this rule, future reviews would keep over-reporting intentional teaching structure as bugs, which creates noise and makes the real issues harder to see.
+
+### How to Verify
+1. Read `AGENTS.md` and confirm it has a `Review Standard` section.
+2. Read `skills/code-review.md` and confirm it distinguishes `Must-fix now` issues from `Book-alignment choices`.
+3. Confirm future reviews can explicitly note when a mismatch may be solved in the book rather than the repo.
+
 ## 2026-03-17 — Sprint 1 end-to-end app implemented and verified
 
 ### What Was Built

@@ -8,7 +8,7 @@
 
 | Attribute | Value |
 |-----------|-------|
-| **Phase** | Sprint 2 Preparation |
+| **Phase** | Sprint 2 Baseline Lockdown |
 | **Mode** | 2 (Implementation with approval) |
 | **Last Updated** | 2026-03-17 |
 
@@ -22,7 +22,7 @@
 ## What's Happening Now
 
 ### Current Work Stream
-Closing out Sprint 1 after building and verifying the first working end-to-end app, then preparing the `reference-working` baseline work.
+Hardening the happy-path repo state and creating the `reference-working` branch from the corrected working app.
 
 ### Recently Completed
 - ✅ Project scaffolded with init-agent
@@ -35,9 +35,13 @@ Closing out Sprint 1 after building and verifying the first working end-to-end a
 - ✅ Flask API implemented with in-memory meals and health endpoint
 - ✅ React/Vite frontend implemented with list, post, and claim flow
 - ✅ Sprint 1 happy path verified with automated tests and real dev-server runs
+- ✅ README backend setup corrected to match the actual verified run path
+- ✅ Root scaffold metadata cleaned up so it no longer advertises a dead console-script entrypoint
+- ✅ Startup protocol aligned with `WHERE_AM_I.md`, and `architecture.md` added for technical decisions
+- ✅ Sprint 2 happy path re-verified on `main` before baseline branching
 
 ### In Progress
-- ⏳ Preparing Sprint 2 baseline work for `reference-working`
+- ⏳ Creating and validating `reference-working`
 
 ---
 
@@ -85,8 +89,8 @@ Closing out Sprint 1 after building and verifying the first working end-to-end a
 
 | Rank | Action | Owner | Done When |
 |------|--------|-------|----------|
-| 1 | Re-run the happy path from a clean setup | AI | Sprint 2 baseline is verified as reproducible |
-| 2 | Create the `reference-working` branch from the verified app state | Human+AI | Known-good demo branch exists |
+| 1 | Create the `reference-working` branch from the verified app state | AI | Known-good demo branch exists on origin |
+| 2 | Re-run backend and frontend verification on `reference-working` | AI | Baseline branch is confirmed runnable |
 | 3 | Update docs to explain when to use `main` versus `reference-working` | AI | Branch roles are explicit in reader and handoff docs |
 
 ---

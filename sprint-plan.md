@@ -11,7 +11,7 @@
 | Sprint | Focus | Status | Exit Condition |
 |--------|-------|--------|----------------|
 | Sprint 1 — Foundation | Build the smallest working end-to-end app | ✅ Complete | Backend and frontend both run locally and the happy path works |
-| Sprint 2 — Reference Baseline | Lock down the known-good runnable state | 🟡 Ready to start | `reference-working` exists and is verified as the demo baseline |
+| Sprint 2 — Reference Baseline | Lock down the known-good runnable state | 🟡 In progress | `reference-working` exists and is verified as the demo baseline |
 | Sprint 3 — Book Workflow Support | Add the branch/worktree artifacts used by the book | ⬜ Planned | `feat/theme-switcher` workflow is reproducible |
 | Sprint 4 — Failure Validation | Verify intentional friction on `main` without breaking core logic | ⬜ Planned | Canonical setup failures and recoveries are confirmed |
 | Sprint 5 — Release Readiness | Final docs and project consistency pass | ⬜ Planned | Reader-facing docs, handoff docs, and verification records are aligned |
@@ -62,12 +62,13 @@
 
 ## Sprint 2 — Reference Baseline
 
-**Status**: READY  
+**Status**: IN PROGRESS  
 **Goal**: Capture and protect the first known-good working state.
 
 ### Scope
 
 - Confirm the end-to-end app is stable enough to freeze as a baseline
+- Fix misleading repo artifacts that would weaken the happy-path baseline
 - Create the `reference-working` branch from the verified app state
 - Document how this branch should differ from `main`
 
@@ -75,23 +76,28 @@
 
 | ID | Status | Task | Notes |
 |----|--------|------|-------|
-| S2-01 | ⬜ Todo | Re-run the Sprint 1 happy path from a clean setup | Baseline should be reproducible |
-| S2-02 | ⬜ Todo | Create `reference-working` branch | Known-good demo branch |
-| S2-03 | ⬜ Todo | Verify `reference-working` remains runnable | Use as sanity-check branch |
-| S2-04 | ⬜ Todo | Update docs to explain the role of `reference-working` | Keep branch strategy explicit |
+| S2-01 | ✅ Done | Fix the documented backend run command | README now uses the backend venv interpreter explicitly |
+| S2-02 | ✅ Done | Clean up the leftover root scaffold metadata | Removed the dead console script and aligned Python version metadata |
+| S2-03 | ✅ Done | Align startup and architecture handoff docs | Startup protocol fixed and `architecture.md` added |
+| S2-04 | ✅ Done | Re-run the happy path from a clean setup | Backend tests, build, and real backend startup passed on `main` |
+| S2-05 | ⏳ In progress | Create `reference-working` branch | Known-good demo branch |
+| S2-06 | ⬜ Todo | Verify `reference-working` remains runnable | Use as sanity-check branch |
+| S2-07 | ⬜ Todo | Update docs to explain the role of `reference-working` | Keep branch strategy explicit |
 
 ### Acceptance Criteria
 
 - `reference-working` exists from a verified working app state
+- The happy-path docs and metadata no longer send users down known-dead setup paths
 - The branch can be used to demo the core app without setup ambiguity
 - Handoff docs explain when to use `main` versus `reference-working`
 
 ### Verification Plan
 
-1. Start from the verified working tree.
-2. Create `reference-working`.
-3. Re-run backend and frontend on that branch.
-4. Confirm branch strategy docs still match reality.
+1. Fix the repo artifacts that currently misdescribe the happy path.
+2. Re-run backend and frontend verification from the corrected setup docs.
+3. Create `reference-working`.
+4. Re-run backend and frontend on that branch.
+5. Confirm branch strategy docs still match reality.
 
 ---
 
@@ -210,7 +216,7 @@
 
 ## Current Focus
 
-Sprint 1 is complete. The next concrete execution task is `S2-01`: re-run the happy path from a clean setup and prepare the verified `reference-working` baseline.
+Sprint 2 is in progress. The next concrete execution task is `S2-05`: create and verify the `reference-working` branch from the current corrected app state.
 
 ---
 

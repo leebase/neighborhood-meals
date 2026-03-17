@@ -19,7 +19,7 @@ Create the backend virtual environment and install dependencies:
 cd backend
 uv venv --python 3.11 .venv
 uv pip install -e .
-python app.py
+./.venv/bin/python app.py
 ```
 
 The Flask API runs on `http://localhost:8000`.

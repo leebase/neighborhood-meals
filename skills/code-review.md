@@ -12,6 +12,15 @@
 Your job is to find problems and describe fixes. Output goes to `code-reviews/review-2026-03-17.md`.
 If you find something obviously wrong and safe to fix, describe the fix precisely — but do not apply it unless the human explicitly says so.
 
+This project has an extra constraint: the repo and the book co-evolve.
+
+- Do not treat intentional friction or known teaching artifacts as automatic defects.
+- Distinguish between:
+  - **Must-fix now**: real repo correctness, security, behavior, or documentation problems in the current state
+  - **Book-alignment choices**: things that may be acceptable in code if the manuscript will be updated to match
+- If a mismatch could be resolved either by changing code/docs or by updating the book, say so explicitly.
+- Be proportionate. Do not turn every scaffold leftover or teaching artifact into a blocker unless it actually misleads users right now.
+
 ---
 
 ## Phase 0: Map the Project First
@@ -128,6 +137,11 @@ Output to `code-reviews/review-2026-03-17.md`. Use this structure exactly:
 | R002 | High | Security | `src/main.zig:312 runSubprocess()` | User-provided filename passed directly to subprocess argv without validation | Sanitize or reject filenames containing shell metacharacters |
 | ... | | | | | |
 
+## Book-Alignment Notes
+
+- [Item that is not necessarily a repo defect, but may need to be reflected back into the manuscript]
+- [Item that is acceptable as an intentional artifact if documented clearly]
+
 ## Remediation Roadmap
 
 ### Fix Now (Blockers)
@@ -182,6 +196,8 @@ if (bytes_read == 0) {
 **Bad:** "Error handling could be improved throughout the codebase."
 
 The first is actionable. The second is noise that wastes everyone's time.
+
+Also bad for this project: reporting an intentional teaching artifact as a bug without first checking whether it conflicts with the repo's documented intent.
 
 ---
 

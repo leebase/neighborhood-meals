@@ -13,7 +13,7 @@
 | **Project** | neighborhood-meals |
 | **Profile** | Full-stack web app (Flask + React/Vite) |
 | **Current Phase** | Phase 1 — Working MVP Baseline |
-| **Overall Status** | 🟡 First working app built; baseline branch still pending |
+| **Overall Status** | 🟡 Working app corrected and verified; baseline branch is being created |
 | **Last Updated** | 2026-03-17 |
 
 ---
@@ -45,7 +45,7 @@
 | Sprint | Focus | Status |
 |--------|-------|--------|
 | Sprint 1 — Foundation | Core setup and first feature | ✅ Complete |
-| Sprint 2 — Reference Baseline | Known-good runnable branch | 🟡 Next |
+| Sprint 2 — Reference Baseline | Known-good runnable branch | 🟡 In progress |
 
 ---
 

@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "neighborhood-meals"
 version = "0.1.0"
-description = "AI-agent project: neighborhood-meals"
+description = "Project-level tooling and documentation metadata for neighborhood-meals"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
     {name = "Lee Harrington"}
@@ -16,12 +16,10 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    # Add your dependencies here
 ]
 
 [project.optional-dependencies]
@@ -31,15 +29,12 @@ dev = [
     "ruff>=0.1.0",
 ]
 
-[project.scripts]
-neighborhood-meals = "neighborhood-meals.main:main"
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ['py311']
 
 [tool.ruff]
 line-length = 88

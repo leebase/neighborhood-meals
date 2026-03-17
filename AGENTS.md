@@ -21,8 +21,9 @@ At the start of every session, in order:
 
 1. Read `AGENTS.md` (this file) — guardrails and operating rules
 2. Read `context.md` — current state and what to do next
-3. Check `result-review.md` — what was recently completed
-4. Read `sprint-plan.md` — current sprint tasks and priorities
+3. Read `WHERE_AM_I.md` — product-level orientation and milestone status
+4. Check `result-review.md` — what was recently completed
+5. Read `sprint-plan.md` — current sprint tasks and priorities
 
 ---
 
@@ -117,6 +118,17 @@ The `Mode` field in `context.md` controls how independently you work:
 - **Specific**: Include file paths, line numbers, exact commands
 - **Actionable**: Provide clear next steps
 - **Honest**: Flag concerns or blockers immediately
+
+## Review Standard
+
+When reviewing this project, be reasonable about the fact that the repo and the book co-evolve.
+
+- Treat something as a real finding when it is misleading, broken, internally inconsistent, or likely to send a reader/agent down the wrong path **in the current repo state**
+- Do **not** report intentional friction, teaching artifacts, or temporary book-facing scaffolding as defects unless they contradict the current documented intent
+- Separate review output into two buckets when needed:
+  - **Must-fix now**: real repo correctness, behavior, security, or documentation problems
+  - **Book-alignment choices**: acceptable artifacts or decisions that may be fed back into the manuscript instead of being changed in code immediately
+- If a discrepancy could reasonably be resolved either by changing the repo or by updating the book, say that explicitly instead of presenting it as an unconditional bug
 
 ---
 
