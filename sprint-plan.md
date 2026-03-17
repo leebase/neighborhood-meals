@@ -11,7 +11,7 @@
 | Sprint | Focus | Status | Exit Condition |
 |--------|-------|--------|----------------|
 | Sprint 1 — Foundation | Build the smallest working end-to-end app | ✅ Complete | Backend and frontend both run locally and the happy path works |
-| Sprint 2 — Reference Baseline | Lock down the known-good runnable state | 🟡 In progress | `reference-working` exists and is verified as the demo baseline |
+| Sprint 2 — Reference Baseline | Lock down the known-good runnable state | ✅ Complete | `reference-working` exists and is verified as the demo baseline |
 | Sprint 3 — Book Workflow Support | Add the branch/worktree artifacts used by the book | ⬜ Planned | `feat/theme-switcher` workflow is reproducible |
 | Sprint 4 — Failure Validation | Verify intentional friction on `main` without breaking core logic | ⬜ Planned | Canonical setup failures and recoveries are confirmed |
 | Sprint 5 — Release Readiness | Final docs and project consistency pass | ⬜ Planned | Reader-facing docs, handoff docs, and verification records are aligned |
@@ -62,7 +62,7 @@
 
 ## Sprint 2 — Reference Baseline
 
-**Status**: IN PROGRESS  
+**Status**: COMPLETE  
 **Goal**: Capture and protect the first known-good working state.
 
 ### Scope
@@ -80,9 +80,9 @@
 | S2-02 | ✅ Done | Clean up the leftover root scaffold metadata | Removed the dead console script and aligned Python version metadata |
 | S2-03 | ✅ Done | Align startup and architecture handoff docs | Startup protocol fixed and `architecture.md` added |
 | S2-04 | ✅ Done | Re-run the happy path from a clean setup | Backend tests, build, and real backend startup passed on `main` |
-| S2-05 | ⏳ In progress | Create `reference-working` branch | Known-good demo branch |
-| S2-06 | ⬜ Todo | Verify `reference-working` remains runnable | Use as sanity-check branch |
-| S2-07 | ⬜ Todo | Update docs to explain the role of `reference-working` | Keep branch strategy explicit |
+| S2-05 | ✅ Done | Create `reference-working` branch | Created locally and pushed to origin |
+| S2-06 | ✅ Done | Verify `reference-working` remains runnable | Backend tests, build, and real backend startup passed on the branch |
+| S2-07 | ✅ Done | Update docs to explain the role of `reference-working` | Reader and handoff docs now call out branch roles explicitly |
 
 ### Acceptance Criteria
 
@@ -216,7 +216,7 @@
 
 ## Current Focus
 
-Sprint 2 is in progress. The next concrete execution task is `S2-05`: create and verify the `reference-working` branch from the current corrected app state.
+Sprint 2 is complete. The next concrete execution task is `S3-01`: create the `feat/theme-switcher` branch used in the book's worktree examples.
 
 ---
 

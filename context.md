@@ -8,7 +8,7 @@
 
 | Attribute | Value |
 |-----------|-------|
-| **Phase** | Sprint 2 Baseline Lockdown |
+| **Phase** | Sprint 3 Preparation |
 | **Mode** | 2 (Implementation with approval) |
 | **Last Updated** | 2026-03-17 |
 
@@ -22,7 +22,7 @@
 ## What's Happening Now
 
 ### Current Work Stream
-Hardening the happy-path repo state and creating the `reference-working` branch from the corrected working app.
+Closing Sprint 2 after creating and verifying `reference-working`, then preparing the Git/worktree support branch used by the book examples.
 
 ### Recently Completed
 - ✅ Project scaffolded with init-agent
@@ -39,9 +39,12 @@ Hardening the happy-path repo state and creating the `reference-working` branch 
 - ✅ Root scaffold metadata cleaned up so it no longer advertises a dead console-script entrypoint
 - ✅ Startup protocol aligned with `WHERE_AM_I.md`, and `architecture.md` added for technical decisions
 - ✅ Sprint 2 happy path re-verified on `main` before baseline branching
+- ✅ `reference-working` branch created and pushed to origin
+- ✅ `reference-working` verified with backend tests, frontend build, and real backend startup
+- ✅ Reader-facing docs updated to explain `main` versus `reference-working`
 
 ### In Progress
-- ⏳ Creating and validating `reference-working`
+- ⏳ Preparing Sprint 3 workflow-support work
 
 ---
 
@@ -89,9 +92,9 @@ Hardening the happy-path repo state and creating the `reference-working` branch 
 
 | Rank | Action | Owner | Done When |
 |------|--------|-------|----------|
-| 1 | Create the `reference-working` branch from the verified app state | AI | Known-good demo branch exists on origin |
-| 2 | Re-run backend and frontend verification on `reference-working` | AI | Baseline branch is confirmed runnable |
-| 3 | Update docs to explain when to use `main` versus `reference-working` | AI | Branch roles are explicit in reader and handoff docs |
+| 1 | Create the `feat/theme-switcher` branch from the right base | AI | Branch exists locally and on origin |
+| 2 | Add the minimal theme-related change used by the book workflow examples | AI | Branch contains a trivial but real UI delta |
+| 3 | Validate the worktree flow with `../neighborhood-meals-theme-switcher` | AI | The documented worktree example is reproducible |
 
 ---
 

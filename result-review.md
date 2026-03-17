@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-03-17 — Sprint 2 reference baseline completed
+
+### What Was Built
+Finished Sprint 2 by creating the `reference-working` branch from the corrected working app state and verifying that branch directly. The baseline branch now exists on origin, and the repo docs explain when to use `main` versus `reference-working`.
+
+### Why It Matters
+This gives the project a trustworthy runnable baseline separate from the intentionally friction-heavy reader branch. That makes future debugging, demos, and recovery work much easier without weakening the book-facing setup on `main`.
+
+### How to Verify
+1. Run `git branch -a` and confirm both `main` and `origin/reference-working` exist.
+2. Check out `reference-working`.
+3. Run `./backend/.venv/bin/python -m unittest tests/test_backend.py`.
+4. Run `cd frontend && npm run build`.
+5. Start the backend with `cd backend && ./.venv/bin/python app.py` and confirm `/health` returns `{"status":"ok"}`.
+
 ## 2026-03-17 — Sprint 2 baseline fixes prepared on main
 
 ### What Was Built
