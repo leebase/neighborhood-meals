@@ -12,7 +12,7 @@
 |--------|-------|--------|----------------|
 | Sprint 1 — Foundation | Build the smallest working end-to-end app | ✅ Complete | Backend and frontend both run locally and the happy path works |
 | Sprint 2 — Reference Baseline | Lock down the known-good runnable state | ✅ Complete | `reference-working` exists and is verified as the demo baseline |
-| Sprint 3 — Book Workflow Support | Add the branch/worktree artifacts used by the book | ⬜ Planned | `feat/theme-switcher` workflow is reproducible |
+| Sprint 3 — Book Workflow Support | Add the branch/worktree artifacts used by the book | ✅ Complete | `feat/theme-switcher` workflow is reproducible |
 | Sprint 4 — Failure Validation | Verify intentional friction on `main` without breaking core logic | ⬜ Planned | Canonical setup failures and recoveries are confirmed |
 | Sprint 5 — Release Readiness | Final docs and project consistency pass | ⬜ Planned | Reader-facing docs, handoff docs, and verification records are aligned |
 
@@ -103,7 +103,7 @@
 
 ## Sprint 3 — Book Workflow Support
 
-**Status**: PLANNED  
+**Status**: COMPLETE  
 **Goal**: Add the minimal artifacts needed for the book's Git and worktree chapters.
 
 ### Scope
@@ -116,10 +116,10 @@
 
 | ID | Status | Task | Notes |
 |----|--------|------|-------|
-| S3-01 | ⬜ Todo | Create `feat/theme-switcher` from the appropriate base | Match book conventions exactly |
-| S3-02 | ⬜ Todo | Implement a tiny theme-related UI change on that branch | CSS variable or toggle only |
-| S3-03 | ⬜ Todo | Validate worktree examples with `../neighborhood-meals-theme-switcher` | Path is load-bearing |
-| S3-04 | ⬜ Todo | Record any repo-shape assumptions exposed by the workflow tests | Feed back into docs if needed |
+| S3-01 | ✅ Done | Create `feat/theme-switcher` from the appropriate base | Branch created from `main` in the canonical worktree path |
+| S3-02 | ✅ Done | Implement a tiny theme-related UI change on that branch | Added a small frontend theme toggle with a second palette |
+| S3-03 | ✅ Done | Validate worktree examples with `../neighborhood-meals-theme-switcher` | Worktree created, branch pushed, and checkout conflict reproduced from `main` |
+| S3-04 | ✅ Done | Record any repo-shape assumptions exposed by the workflow tests | The worktree frontend requires its own `npm install` because `node_modules` is intentionally uncommitted |
 
 ### Acceptance Criteria
 
@@ -191,6 +191,9 @@
 | S5-02 | ⬜ Todo | Final handoff-doc consistency pass | `context.md`, `WHERE_AM_I.md`, `result-review.md` |
 | S5-03 | ⬜ Todo | Run end-to-end verification one more time | Confirm no drift before release |
 | S5-04 | ⬜ Todo | Record final release-ready status in project docs | Leave a clean handoff state |
+| S5-05 | ⬜ Todo | Add backend coverage for claiming a nonexistent meal | Follow-up from 2026-03-17 code review |
+| S5-06 | ⬜ Todo | Add frontend coverage for initial meal-load failure state | Follow-up from 2026-03-17 code review |
+| S5-07 | ⬜ Todo | Add a docs smoke-check for the canonical setup commands | Follow-up from 2026-03-17 code review |
 
 ### Acceptance Criteria
 
@@ -216,7 +219,7 @@
 
 ## Current Focus
 
-Sprint 2 is complete. The next concrete execution task is `S3-01`: create the `feat/theme-switcher` branch used in the book's worktree examples.
+Sprint 3 is complete. The next concrete execution task is `S4-01`: verify the intentional failure scenarios on `main` without weakening the working app.
 
 ---
 

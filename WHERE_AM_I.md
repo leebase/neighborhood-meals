@@ -12,8 +12,8 @@
 |-----------|-------|
 | **Project** | neighborhood-meals |
 | **Profile** | Full-stack web app (Flask + React/Vite) |
-| **Current Phase** | Phase 2 — Workflow Example Setup |
-| **Overall Status** | 🟡 Working baseline is locked; book workflow branches are next |
+| **Current Phase** | Phase 3 — Intentional Friction Verification |
+| **Overall Status** | 🟡 Working baseline and workflow branch exist; failure-scenario validation is next |
 | **Last Updated** | 2026-03-17 |
 
 ---
@@ -46,7 +46,8 @@
 |--------|-------|--------|
 | Sprint 1 — Foundation | Core setup and first feature | ✅ Complete |
 | Sprint 2 — Reference Baseline | Known-good runnable branch | ✅ Complete |
-| Sprint 3 — Book Workflow Support | Worktree/example branch setup | 🟡 Next |
+| Sprint 3 — Book Workflow Support | Worktree/example branch setup | ✅ Complete |
+| Sprint 4 — Failure Validation | Intentional setup failures | 🟡 Next |
 
 ---
 
@@ -54,7 +55,7 @@
 
 | Risk/Blocker | Impact | Status |
 |-------------|--------|--------|
-| `feat/theme-switcher` does not exist yet | Git and worktree chapters still depend on a branch that has not been created | 🟡 Active |
+| Intentional-failure scenarios are not yet re-verified against the current repo state | The book examples could drift if setup behavior changes unnoticed | 🟡 Active |
 
 ---
 

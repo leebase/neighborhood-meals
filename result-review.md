@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-03-17 — Sprint 3 workflow branch and worktree example completed
+
+### What Was Built
+Created and pushed the `feat/theme-switcher` branch and used the canonical worktree path `../neighborhood-meals-theme-switcher` to implement a small but real frontend theme toggle there. The worktree example was validated from both sides: the feature branch builds successfully in the worktree, and attempting to check out the same branch from `main` reproduces the expected “already used by worktree” Git error.
+
+### Why It Matters
+This turns the Git/worktree chapters into real repo state instead of hypothetical instructions. The project now has the exact feature branch and worktree layout the book references.
+
+### How to Verify
+1. Run `git worktree list` from the repo root and confirm `../neighborhood-meals-theme-switcher` is present.
+2. Run `git -C /Users/leeharrington/projects/neighborhood-meals checkout feat/theme-switcher` and confirm Git reports the branch is already used by the worktree.
+3. Run `cd ../neighborhood-meals-theme-switcher/frontend && npm install && npm run build` and confirm the theme branch frontend builds successfully.
+4. Confirm `git branch -a` shows `origin/feat/theme-switcher`.
+
 ## 2026-03-17 — Sprint 2 reference baseline completed
 
 ### What Was Built

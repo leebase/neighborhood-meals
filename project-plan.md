@@ -156,7 +156,7 @@ Create a minimal but real application that supports the book's setup, debugging,
 
 **Phase**: Phase 1 — Core Foundation
 **Mode**: Mode 2 (Implementation with approval)
-**Next Milestone**: Create the `feat/theme-switcher` workflow branch and verify the worktree example
+**Next Milestone**: Re-verify the intentional setup and workflow failures on `main`
 
 ---
 

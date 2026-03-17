@@ -8,7 +8,7 @@
 
 | Attribute | Value |
 |-----------|-------|
-| **Phase** | Sprint 3 Preparation |
+| **Phase** | Sprint 4 Preparation |
 | **Mode** | 2 (Implementation with approval) |
 | **Last Updated** | 2026-03-17 |
 
@@ -22,7 +22,7 @@
 ## What's Happening Now
 
 ### Current Work Stream
-Closing Sprint 2 after creating and verifying `reference-working`, then preparing the Git/worktree support branch used by the book examples.
+Closing Sprint 3 after creating the workflow-support branch and validating the canonical worktree behavior, then preparing intentional-friction verification on `main`.
 
 ### Recently Completed
 - ✅ Project scaffolded with init-agent
@@ -42,9 +42,13 @@ Closing Sprint 2 after creating and verifying `reference-working`, then preparin
 - ✅ `reference-working` branch created and pushed to origin
 - ✅ `reference-working` verified with backend tests, frontend build, and real backend startup
 - ✅ Reader-facing docs updated to explain `main` versus `reference-working`
+- ✅ `feat/theme-switcher` branch created and pushed to origin
+- ✅ Theme switcher example implemented on the feature branch
+- ✅ Canonical worktree path `../neighborhood-meals-theme-switcher` validated
+- ✅ Confirmed that each worktree needs its own frontend install because `node_modules` remains intentionally uncommitted
 
 ### In Progress
-- ⏳ Preparing Sprint 3 workflow-support work
+- ⏳ Preparing Sprint 4 intentional-friction verification
 
 ---
 
@@ -92,9 +96,9 @@ Closing Sprint 2 after creating and verifying `reference-working`, then preparin
 
 | Rank | Action | Owner | Done When |
 |------|--------|-------|----------|
-| 1 | Create the `feat/theme-switcher` branch from the right base | AI | Branch exists locally and on origin |
-| 2 | Add the minimal theme-related change used by the book workflow examples | AI | Branch contains a trivial but real UI delta |
-| 3 | Validate the worktree flow with `../neighborhood-meals-theme-switcher` | AI | The documented worktree example is reproducible |
+| 1 | Verify backend failure before venv setup on `main` | AI | Canonical `ModuleNotFoundError` path is confirmed |
+| 2 | Verify frontend failure before `npm install` on a clean worktree | AI | Canonical `vite: command not found` path is confirmed |
+| 3 | Re-check version metadata and ignored directories | AI | Intentional friction still matches the product definition |
 
 ---
 
