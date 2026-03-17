@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
 
 const API_BASE_URL = "http://localhost:8000";
+const THEMES = {
+  porch: {
+    name: "Porch Light",
+    note: "Warm and neighborly for the default branch experience.",
+  },
+  dusk: {
+    name: "Dusk Pickup",
+    note: "Cooler contrast for evening claim runs.",
+  },
+};
 
 export default function App() {
   const [meals, setMeals] = useState([]);
   const [title, setTitle] = useState("");
+  const [theme, setTheme] = useState("porch");
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -87,13 +98,34 @@ export default function App() {
   }
 
   return (
-    <main className="app-shell">
+    <main className="app-shell" data-theme={theme}>
       <section className="card">
-        <p className="eyebrow">Community Pickup Board</p>
-        <h1>Neighborhood Meals</h1>
-        <p className="intro">
-          Post an extra meal for your neighbors, then claim one before dinner is over.
-        </p>
+        <div className="hero-row">
+          <div>
+            <p className="eyebrow">Community Pickup Board</p>
+            <h1>Neighborhood Meals</h1>
+            <p className="intro">
+              Post an extra meal for your neighbors, then claim one before dinner is over.
+            </p>
+          </div>
+
+          <div className="theme-switcher" aria-label="Theme switcher">
+            <p className="theme-label">Theme</p>
+            <div className="theme-buttons">
+              {Object.entries(THEMES).map(([key, value]) => (
+                <button
+                  key={key}
+                  type="button"
+                  className={key === theme ? "theme-button active" : "theme-button"}
+                  onClick={() => setTheme(key)}
+                >
+                  {value.name}
+                </button>
+              ))}
+            </div>
+            <p className="theme-note">{THEMES[theme].note}</p>
+          </div>
+        </div>
 
         <form className="meal-form" onSubmit={handleSubmit}>
           <label htmlFor="title">Meal title</label>
