@@ -12,8 +12,8 @@
 |-----------|-------|
 | **Project** | neighborhood-meals |
 | **Profile** | Full-stack web app (Flask + React/Vite) |
-| **Current Phase** | Phase 1 — Working MVP Baseline |
-| **Overall Status** | 🟡 Working app corrected and verified; baseline branch is being created |
+| **Current Phase** | Phase 2 — Workflow Example Setup |
+| **Overall Status** | 🟡 Working baseline is locked; book workflow branches are next |
 | **Last Updated** | 2026-03-17 |
 
 ---
@@ -45,7 +45,8 @@
 | Sprint | Focus | Status |
 |--------|-------|--------|
 | Sprint 1 — Foundation | Core setup and first feature | ✅ Complete |
-| Sprint 2 — Reference Baseline | Known-good runnable branch | 🟡 In progress |
+| Sprint 2 — Reference Baseline | Known-good runnable branch | ✅ Complete |
+| Sprint 3 — Book Workflow Support | Worktree/example branch setup | 🟡 Next |
 
 ---
 
@@ -53,7 +54,7 @@
 
 | Risk/Blocker | Impact | Status |
 |-------------|--------|--------|
-| `reference-working` has not been created yet | The app works, but the known-good recovery branch is not locked in | 🟡 Active |
+| `feat/theme-switcher` does not exist yet | Git and worktree chapters still depend on a branch that has not been created | 🟡 Active |
 
 ---
 

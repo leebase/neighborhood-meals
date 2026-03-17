@@ -47,6 +47,11 @@ The frontend runs on `http://localhost:3000`.
 
 This repository intentionally preserves some setup friction for the companion book. Do not remove expected files like `backend/requirements.txt`, and do not commit `backend/.venv/` or `frontend/node_modules/`.
 
+## Branches
+
+- `main` is the book-facing branch. It preserves intentional environment and workflow friction while keeping the underlying app code correct.
+- `reference-working` is the known-good runnable baseline. Use it when you need to confirm the app works end to end without wondering whether an issue is caused by an unfinished repo state.
+
 ## Updating Templates
 
 To refresh the generic AgentFlow contract files without overwriting project memory:
